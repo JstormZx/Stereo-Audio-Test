@@ -18,16 +18,17 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Download Gradle 8.0.2
+      - name: Download Gradle 7.6.2
         run: |
-          curl -sSLo gradle-bin.zip https://services.gradle.org/distributions/gradle-8.0.2-bin.zip
+          curl -sSLo gradle-bin.zip https://services.gradle.org/distributions/gradle-7.6.2-bin.zip
           unzip -q gradle-bin.zip
 
-      - name: Build with Gradle 8.0.2
-        run: ./gradle-8.0.2/bin/gradle assembleRelease
+      - name: Build with Gradle 7.6.2
+        run: ./gradle-7.6.2/bin/gradle assembleRelease
 
       - name: Upload AAR Artifact
         uses: actions/upload-artifact@v4
         with:
           name: LSPosed-Stereo-Module
           path: app/build/outputs/aar/*.aar
+          
