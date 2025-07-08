@@ -1,0 +1,8 @@
+{
+  "name": "Stereo Audio Capture Enabler",
+  "description": "Forces stereo audio input for screen recording",
+  "version": "1.0",
+  "author": "ChatGPT",
+  "main_class": "com.stereo.capture.HookEntry",
+  "min_lsp_version": "1.6.0"
+}
